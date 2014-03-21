@@ -28,12 +28,12 @@ fin;
 }
 
 public static function jwysiwyg ($selecteurs='.jwysiwyg') {
-    $css = asset("assets/admin/js/editeur/jwysiwyg/jquery.wysiwyg.css");
-    $js1 = asset("assets/admin/js/editeur/jwysiwyg/jquery.wysiwyg.js");
-    $js2 = asset("assets/admin/js/editeur/jwysiwyg/controls/wysiwyg.link.js");
+    $css = asset("packages/ipsum/admin/js/editeur/jwysiwyg/jquery.wysiwyg.css");
+    $js1 = asset("packages/ipsum/admin/js/editeur/jwysiwyg/jquery.wysiwyg.js");
+    $js2 = asset("packages/ipsum/admin/js/editeur/jwysiwyg/controls/wysiwyg.link.js");
     $code = '<link rel="stylesheet" href="'.$css.'" type="text/css" />
     <script type="text/javascript" src="'.$js1.'"></script>
-    <script type="text/javascript" src="'.$js2.'"></script>';    
+    <script type="text/javascript" src="'.$js2.'"></script>';
     $code .= <<<fin
     <script type="text/javascript">
         $(document).ready(function() {
@@ -81,10 +81,10 @@ fin;
 }
 
 public static function datePicker ($param='') {
-    $css = asset("assets/js/datePicker/date-picker.css");
-    $js1 = asset("assets/js/datePicker/jquery.datePicker.js");
-    $js2 = asset("assets/js/datePicker/date.js"); 
-    $js3 = asset("assets/js/datePicker/date_fr.js");  
+    $css = asset("packages/ipsum/js/datePicker/date-picker.css");
+    $js1 = asset("packages/ipsum/js/datePicker/jquery.datePicker.js");
+    $js2 = asset("packages/ipsum/js/datePicker/date.js");
+    $js3 = asset("packages/ipsum/js/datePicker/date_fr.js");
     $code = <<<fin
         <link rel="stylesheet" type="text/css" href="$css" />
         <script type="text/javascript" src="$js1"></script>
@@ -156,4 +156,3 @@ fin;
     return $code;
 }
 }
-    
