@@ -1,0 +1,30 @@
+{
+    "name": "ipsum/admin",
+    "description": "",
+    "authors": [
+        {
+            "name": "B1nj",
+            "email": "postmaster@b1nj.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "ipsum/core": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/ipsum-laravel/core.git"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-4": {
+            "Ipsum\\Admin\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}

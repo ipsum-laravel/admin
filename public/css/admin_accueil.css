@@ -1,0 +1,120 @@
+/*----------------------Accueil------------------------*/
+/*-------------------<--  B1nj -->---------------------*/
+
+/*---- Reset css -------*/
+* {margin: 0; padding: 0;}
+a img {border: 0;}
+p {font-size: .8em;}
+
+html {
+    height: 100%;
+}
+
+/*---- Mise en page -------*/
+body {
+background: #e5e3e4;
+text-align: center;
+font-family:  Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif;
+font-size: 100%;
+color: black;
+position: relative;
+}
+	#conteneur {
+	position: relative;
+	width:420px;
+	margin: 50px auto 0 auto;
+	text-align:left;
+	background: transparent url(accueil.png) 0 0 repeat-y;
+	}
+		#conteneur_haut {
+		font-size:  1px;
+		height: 17px;
+		background: transparent url(accueil_haut.png) 0 0 no-repeat;
+		}
+		#conteneur_bas {
+		font-size:  1px;
+		height: 17px;
+		background: transparent url(accueil_bas.png) 0 0 no-repeat;
+		}
+	h1 {
+	text-align: center;
+	}
+		h1 span{
+		background: #cbc67d;
+		color: white;
+		font-size: .6em;
+		font-weight: bold;
+		display: block;
+		margin: 0 10px 0 9px;
+		text-align: center;
+		}
+		h1 img {
+		margin: 20px 0px;
+		}
+
+.baspage {
+font-size: .7em;
+text-align: center;	
+}
+
+/*---- AFFICHAGE formulaires  -------*/ 
+form {
+margin: 20px 30px 5px 30px;
+}
+	fieldset {
+	padding:  10px;	
+	}
+	legend {
+	padding: 0 .5em;
+	margin-left: 5px;
+	font-weight: normal;
+	font-size: .8em;
+	}
+	label {
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	float: left;
+	width: 145px;
+	text-align:  right;
+	padding-right: 10px;
+	clear: both;
+	}
+	input, textarea {
+	/*display: block;*/
+	}
+	p {
+	padding: 5px 0;	
+	}
+	.submit {
+	margin-left: 150px;
+	clear: both;
+	}
+	.textWarning {
+	color: red;
+	text-align: center;	
+	}
+	.cookie input{
+	margin-left:  125px;
+	}
+	.cookie label{
+	float: right;
+	text-align: left;
+	margin-right: 35px;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: .9em;
+	overflow: hidden;
+	}
+/*---- Messages divers -------*/
+.attention, .confirmation {
+background: #fce5e1 url(../images/attention.gif) 10px 5px no-repeat;
+padding: 0px 5px 5px 50px;
+margin: 1em 1em;
+border: 1px #ff9100 solid;
+}
+.confirmation {
+background: #F0FFF0 url(../images/confirmation.gif) 10px 5px no-repeat;
+border: 1px #009F00 solid;
+}
+
