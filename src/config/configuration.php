@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    array(
+    1 => array(
         'nom' => 'PARAMETRES SYSTEME',
         'smenus' => array(
             array(
@@ -20,7 +20,7 @@ return array(
             ),
         ),
     ),
-    /*array(
+    /*2 => array(
         'nom' => 'GESTION DU SITE',
         'zone' => '',
         'smenus' => array(
