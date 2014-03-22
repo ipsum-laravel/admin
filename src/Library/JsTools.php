@@ -143,8 +143,7 @@ public static function googleMaps ($marker = '', $center = "46.225453,2.219238",
                         map: carte
                     });
                 }
-                document.getElementById('lat').value = location.lat();
-                document.getElementById('lng').value = location.lng();
+                document.getElementById('gps').value=location.lat() + ',' + location.lng();
             }
             $marker
         }
