@@ -81,10 +81,10 @@ fin;
 }
 
 public static function datePicker ($param='') {
-    $css = asset("packages/ipsum/js/datePicker/date-picker.css");
-    $js1 = asset("packages/ipsum/js/datePicker/jquery.datePicker.js");
-    $js2 = asset("packages/ipsum/js/datePicker/date.js");
-    $js3 = asset("packages/ipsum/js/datePicker/date_fr.js");
+    $css = asset("packages/ipsum/admin/js/datePicker/date-picker.css");
+    $js1 = asset("packages/ipsum/admin/js/datePicker/jquery.datePicker.js");
+    $js2 = asset("packages/ipsum/admin/js/datePicker/date.js");
+    $js3 = asset("packages/ipsum/admin/js/datePicker/date_fr.js");
     $code = <<<fin
         <link rel="stylesheet" type="text/css" href="$css" />
         <script type="text/javascript" src="$js1"></script>
