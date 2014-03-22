@@ -2,7 +2,7 @@
 
 // Configuration des rubriques
 return array(
-    1 => array(
+    'groupe1' => array(
         /*'actualite' => array(
             'rubrique' => 'actualite',
             'nom' => 'Actualités',
