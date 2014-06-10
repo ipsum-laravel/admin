@@ -34,7 +34,12 @@ HTML::macro("menu", function($rubrique_active, $menu_actif, $views = 'IpsumAdmin
         if(isset($groupe[$rubrique_active])) {
             foreach ($groupe[$rubrique_active]['menus'] as $key => $menu) {
                 if ( ! (isset($menu['visibility']) and $menu['visibility'] == 'hidden') or $menu_actif == $key) {
-                    $menu['selected'] = $menu_actif == $key ? 'selected' : '';
+                    if ($menu_actif == $key) {
+                        $menu['selected'] = 'selected';
+                    } else {
+                        $menu['selected'] = '';
+                        unset($menu['smenus']);
+                    }
                     $datas[] = $menu;
                 }
             }
