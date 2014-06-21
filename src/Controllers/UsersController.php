@@ -27,7 +27,7 @@ class UsersController extends BaseController {
     public function index()
     {
         if (!Auth::user()->isAdmin()) {
-           return Redirect::route("admin.user.edit");
+           return Redirect::route("admin.user.edit", array('id' => Auth::user()->id));
         }
         $data = array();
 
@@ -74,7 +74,7 @@ class UsersController extends BaseController {
     public function create()
     {
         if (!Auth::user()->isAdmin()) {
-           return Redirect::route("admin.user.edit");
+           return Redirect::route("admin.user.edit", array('id' => Auth::user()->id));
         }
         $role = Config::get('auth.roles');
         $zones = Config::get('auth.zones');
@@ -92,7 +92,7 @@ class UsersController extends BaseController {
     public function store()
     {
         if (!Auth::user()->isAdmin()) {
-           return Redirect::route("admin.user.edit");
+           return Redirect::route("admin.user.edit", array('id' => Auth::user()->id));
         }
         $inputs = Input::all();
         $rules = User::$rules;
@@ -205,7 +205,7 @@ class UsersController extends BaseController {
     public function destroy($id)
     {
         if (!Auth::user()->isAdmin()) {
-           return Redirect::route("admin.user.edit");
+           return Redirect::route("admin.user.edit", array('id' => Auth::user()->id));
         }
         $data = User::findOrFail($id);
         if ($data->delete()) {
