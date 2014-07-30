@@ -534,25 +534,31 @@ clear: both;
 /*---- Pagination -------*/
 .pagination {
 clear: both;
+margin-left: 0 !important;
 text-align: left;
 padding-top: 15px;
+list-style-type: none;
 }
-    .pagination a, .pagination strong{
-    border: 1px solid #e1e4ec;
-    background: white;
-    padding: 1px 4px;
-    margin-right:  4px;
-    text-decoration: none;
-    color: #686034 ;
+    .pagination li {
+    display: inline;
     }
-    .pagination a:hover{
-    border: 1px solid #e1e4ec;
-    background: #cfc8a0;
-    color: white;
-    }
-    .pagination strong{
-    background: #eae7d5 ;
-    }
+        .pagination a, .pagination strong, .pagination span {
+        display: inline-block;
+        border: 1px solid #e1e4ec;
+        background: white;
+        padding: 1px 4px;
+        margin-right:  4px;
+        text-decoration: none;
+        color: #686034 ;
+        }
+        .pagination a:hover {
+        border: 1px solid #e1e4ec;
+        background: #cfc8a0;
+        color: white;
+        }
+        .pagination strong {
+        background: #eae7d5 ;
+        }
 
 /*---- bloc -------*/
 .bloc_left {
