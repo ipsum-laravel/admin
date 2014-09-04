@@ -1,17 +1,17 @@
-<h2>Liste des utilisateurs (<?= $liste->count() ?>)</h2>
-<?= $liste->pagination() ?>
+<h2>Liste des utilisateurs (<?= Liste::count() ?>)</h2>
+<?= Liste::pagination() ?>
 <form method="get" id="recherche" action="">
     <div>
-        <?= $liste->paramsListe(true) ?>
-        <input type="text" name="mot" id="mot" value="<?= $liste->getRechercheValue('mot') ?>" />
+        <?= Liste::inputsHidden(array('mot', 'tri' => array('id'))) ?>
+        <input type="text" name="mot" id="mot" value="<?= Liste::getFiltreValeur('mot') ?>" />
         <input type="submit" name="submit" value="Chercher" />
     </div>
 </form>
 <table class="liste" width="75%">
     <thead>
         <tr>
-            <th><?= $liste->labelTri('nom', 'Nom') ?></th>
-            <th><?= $liste->labelTri('email', 'Email') ?></th>
+            <th><?= Liste::lienTri('Nom', 'nom') ?></th>
+            <th><?= Liste::lienTri('Email', 'email') ?></th>
             <th>Modif.</th>
             <th>Supp.</th>
         </tr>
@@ -33,4 +33,4 @@
         <?php $i++; endforeach; ?>
     </tbody>
 </table>
-<?= $liste->pagination() ?>
+<?= Liste::pagination() ?>

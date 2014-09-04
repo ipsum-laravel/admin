@@ -1,7 +1,7 @@
 <?php
 namespace Ipsum\Admin\Controllers;
 
-use Ipsum\Core\Library\Liste;
+use Liste;
 use View;
 use Input;
 use Redirect;
@@ -29,40 +29,53 @@ class UsersController extends BaseController {
         if (!Auth::user()->isAdmin()) {
            return Redirect::route("admin.user.edit", array('id' => Auth::user()->id));
         }
+
         $data = array();
+        $requete = User::select(
+            'utilisateur.id',
+            'utilisateur.nom',
+            'utilisateur.prenom',
+            'utilisateur.email'
+        );
+        $liste = Liste::setRequete($requete);
+        $filtres = array(
+            array(
+                'nom' => 'id',
+                'colonnes' => 'id',
+            ),
+            array(
+                'nom' => 'mot',
+                'operateur' => 'like',
+                'colonnes' => array (
+                    'utilisateur.nom',
+                    'utilisateur.prenom',
+                    'utilisateur.email'
+                ),
+            ),
+        );
+        Liste::setFiltres($filtres);
+        $tris = array(
+            array(
+                'nom' => 'id',
+                'ordre' => 'asc',
+                'actif' => true,
+            ),
+            array(
+                'nom' => 'nom',
+                'ordre' => 'desc',
+            ),
+            array(
+                'nom' => 'email',
+                'ordre' => 'desc',
+            ),
+        );
+        Liste::setTris($tris);
 
-        $liste = new Liste();
-        $recherche = array(
-            'input'     => 'mot',
-            'colonnes'      => array (
-                'utilisateur.nom',
-                'utilisateur.prenom',
-                'utilisateur.email'
-            )
-        );
-        $liste->setRecherche($recherche);
-        $tri = array(
-            'ordre'     => 'ASC',
-            'colonne'  => 'id'
-        );
-        $liste->setTri($tri);
-        $requete = array(
-            'colonnes'  => 'utilisateur.id,
-                            utilisateur.nom,
-                            utilisateur.prenom,
-                            utilisateur.email',
-            'from'      => 'utilisateur'
-        );
-        $ressource = $liste->select($requete);
-
-        $data['datas'] = array();
-        foreach($ressource as $item) {
-            $data['datas'][] = $item;
+        foreach(Liste::rechercherLignes() as $item) {
+            $datas[] = $item;
         }
 
-        $data['liste'] = $liste;
-
-        $this->layout->content = View::make('IpsumAdmin::user.index', $data);
+        $this->layout->content = View::make('IpsumAdmin::user.index', compact('datas'));
     }
 
 
