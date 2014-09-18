@@ -2,7 +2,7 @@
 <?= Liste::pagination() ?>
 <form method="get" id="recherche" action="">
     <div>
-        <?= Liste::inputsHidden(array('mot', 'tri' => array('id'))) ?>
+        <?= Liste::inputsHidden() ?>
         <input type="text" name="mot" id="mot" value="<?= Liste::getFiltreValeur('mot') ?>" />
         <input type="submit" name="submit" value="Chercher" />
     </div>
