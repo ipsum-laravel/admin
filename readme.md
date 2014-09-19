@@ -1,4 +1,4 @@
-# Instalation du package d'administration d'Ipsum
+# Installation du package d'administration d'Ipsum
 
 ## Modification des fichiers de config
 
@@ -10,11 +10,13 @@ Les fichiers de configuration de votre package peuvent être copiés dans le dos
 
     php artisan asset:publish ipsum/admin
 
-
 ## Authentification
+
 TODO : voir pourquoi le fichier ipsum/admin/src/config/auth n'est pas pris en compte (table plus model)
 
 Actuelement il faut modifier le fichier dans app/config/auth
+
+Login admin : admin@example.com / admin
 
 ## Créations des tables
 
