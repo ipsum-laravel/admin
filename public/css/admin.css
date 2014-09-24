@@ -313,43 +313,45 @@ background: #fce5e1;
     border: 1px solid;
     background: no-repeat 10px 10px;
 }
-    .messages .closeMessage {
-        margin: -.5em -.8em 0 0;
-        display: none;
+    .messages-close {
+        margin: -8px -12px 0 0;
         width: 16px;
         height: 16px;
         float: right;
-        background: url(../img/close.png) no-repeat;
+        background: transparent url(../img/close.png) no-repeat;
+        border: 0 none;
+        /* cache le texte */
+        font: 0/0 serif;
+        text-shadow: none;
     }
-    .messages.error {
+    .messages-error {
         border-color: #C42608;
         color: #c00;
         background-color: #FFF0EF;
         background-image: url(../img/cross.png);
         color: #c00;
     }
-    .messages.success {
+    .messages-success {
         background-color: #E0FBCC;
         border-color: #6DC70C;
         background-image: url(../img/tick.png);
         color: #2B6301;
     }
-    .messages.warning {
+    .messages-warning {
         background-color: #FFFCD3;
         border-color: #EBCD41;
         color: #000;
         background-image: url(../img/warning.png);
-        color: #5F4E01 !important;;
+        color: #5F4E01;
     }
-    .messages.info {
+    .messages-info {
         background-color: #DFEBFB;
         border-color: #82AEE7;
         background-image: url(../img/help.png );
         color: #064393;
     }
-    .messages_ancre {
-        text-decoration: none;
-        color: black !important;
+    .messages.is-close {
+        display: none;
     }
 
 /*---- AFFICHAGE LISTES  -------*/
