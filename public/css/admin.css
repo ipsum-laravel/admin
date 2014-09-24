@@ -439,6 +439,13 @@ font-size:  .8em;
     float: left;
     width: 58%;
     }
+    .saisie .champ_max input, .saisie .champ_max select, .saisie .champ_max textarea {
+    margin-left: 0;
+    display: block;
+    float: none;
+    width: 100%;
+    margin-top: 25px;
+    }
         .saisie input.submit {
         padding: 0px 2px;
         width: 80px;
@@ -446,9 +453,17 @@ font-size:  .8em;
     .saisie div.punymce, .saisie div.wysiwyg {
         margin-left: 35%;
     }
+    .saisie .champ_max div.punymce, .saisie .champ_max div.wysiwyg {
+        margin-left: 0;
+        margin-top: 25px;
+    }
     .saisie textarea.jwysiwyg {
         width: 62%;
         float: right;
+    }
+    .saisie .champ_max textarea.jwysiwyg {
+        width: 99%;
+        float: none;
     }
         #texte .saisie .punymce ul, #texte .saisie .wysiwyg ul {
         margin: 0;
