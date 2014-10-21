@@ -8,7 +8,7 @@
     <link href="<?= asset('packages/ipsum/admin/css/admin_print.css') ?>" type="text/css" rel="stylesheet" media="print" />
 
     <!--    Librairie javascript //-->
-    <script type="text/javascript" src="<?= asset('packages/ipsum/admin/js/jquery-1.5.1.min.js') ?>"></script>
+    <script type="text/javascript" src="<?= asset('packages/ipsum/admin/js/jquery-1.11.1.min.js') ?>"></script>
     <script type="text/javascript" src="<?= asset('packages/ipsum/admin/js/admin.js') ?>"></script>
 
     <?= empty($head) ? '' : $head ?>
