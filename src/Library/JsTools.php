@@ -3,30 +3,6 @@ namespace Ipsum\Admin\Library;
 
 class JsTools {
 
-public static function punyMce ($ids=array('texte2')) {
-    $code = '<script type="text/javascript" src="'.ROOT.'administration/js/editeur/punymce/puny_mce.js"></script>
-            <script type="text/javascript" src="'.ROOT.'administration/js/editeur/punymce/plugins/link/link.js"></script>
-            <script type="text/javascript" src="'.ROOT.'administration/js/editeur/punymce/plugins/editsource/editsource.js"></script>
-            <script type="text/javascript" src="'.ROOT.'administration/js/editeur/punymce/plugins/protect.js"></script>';
-    foreach ($ids as $key => $id) {
-        $code .= <<<fin
-            <script type="text/javascript">
-                var editor$key = new punymce.Editor({
-                    id : '$id',
-                    toolbar : 'bold,italic,strike,ul,ol,link,unlink,editsource',
-                    plugins : 'Link,EditSource,Protect',
-                    protect : {
-                        list : [
-                            /<(script|noscript|style)[\u0000-\uFFFF]*?<\/(script|noscript|style)>/g
-                        ]
-                    }
-                });
-            </script>
-fin;
-    }
-    return $code;
-}
-
 public static function jwysiwyg ($selecteurs='.jwysiwyg') {
     $css = asset("packages/ipsum/admin/js/editeur/jwysiwyg/jquery.wysiwyg.css");
     $js1 = asset("packages/ipsum/admin/js/editeur/jwysiwyg/jquery.wysiwyg.js");
@@ -76,6 +52,38 @@ public static function jwysiwyg ($selecteurs='.jwysiwyg') {
             });
         });
     </script>
+fin;
+    return $code;
+}
+
+public static function markItUp ($previewParserPath, $selecteur = '.markItUp') {
+    $css1 = asset('packages/ipsum/admin/js/editeur/markitup/skins/ipsum/style.css');
+    $css2 = asset('packages/ipsum/admin/js/editeur/markitup/sets/markdown/style.css');
+    $js1 = asset('packages/ipsum/admin/js/editeur/markitup/jquery.markitup.js');
+    $js2 = asset('packages/ipsum/admin/js/editeur/markitup/sets/markdown/set.js');
+    $js3 = asset('packages/ipsum/admin/js/editeur/markitup/jquery.preview.js');
+    $code = <<<fin
+        <script type="text/javascript" src="$js1"></script>
+        <script type="text/javascript" src="$js2"></script>
+        <link rel="stylesheet" type="text/css" href="$css1" />
+        <link rel="stylesheet" type="text/css" href="$css2" />
+        <script type="text/javascript" >
+            mySettings.previewParserPath = "$previewParserPath";
+            function markItUpAddMedia() {
+                $(".markItUpAddMedia").click(function() {
+                    src = $(this).attr("href");
+                    alt = $(this).attr("title");
+                    $.markItUp(
+                        { replaceWith: "!["+alt+"]("+src+")" }
+                    );
+                    return false;
+                });
+            }
+            $(function() {
+                $(".markItUp").markItUp(mySettings);
+            });
+        </script>
+        <script type="text/javascript" src="$js3"></script>
 fin;
     return $code;
 }
