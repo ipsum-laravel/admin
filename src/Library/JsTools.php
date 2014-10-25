@@ -73,14 +73,14 @@ public static function markItUp ($previewParserPath, $selecteur = '.markItUp') {
                 $(".markItUpAddMedia").click(function() {
                     src = $(this).attr("href");
                     alt = $(this).attr("title");
-                    $.markItUp(
+                    $("$selecteur").markItUp(
                         { replaceWith: "!["+alt+"]("+src+")" }
                     );
                     return false;
                 });
             }
             $(function() {
-                $(".markItUp").markItUp(mySettings);
+                $("$selecteur").markItUp(mySettings);
             });
         </script>
         <script type="text/javascript" src="$js3"></script>
