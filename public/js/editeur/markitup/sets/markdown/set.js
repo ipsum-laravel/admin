@@ -28,8 +28,8 @@ mySettings = {
 			return markItUp.line+'. ';
 		}},
 		{separator:'---------------' },
-		{name:'Image', key:'P', replaceWith:'![[![Texte alternatif]!]]([![Url:!:http://]!] "[![Titre]!]")'},
-		{name:'Lien', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!] "[![Titre]!]")', placeHolder:'Texte du lien...' },
+		{name:'Image', key:'P', replaceWith:'![[![Texte alternatif]!]]([![Url:!:http://]!])'},
+		{name:'Lien', key:'L', openWith:'[', closeWith:']([![Url:!:http://]!])', placeHolder:'Texte du lien...' },
 		{separator:'---------------'},
 		{
 		    name:'Aide',

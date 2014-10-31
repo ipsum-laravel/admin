@@ -10,6 +10,7 @@ $(document).ready(function() {
             $('.markItUpSpecialPreview').hide();
             $('.markItUpHeader').show();
         } else {
+            $('.markItUpSpecialPreview').contents().find("body").html('');
             $.ajax({
                 type: 'POST',
                 dataType: 'text',

@@ -69,16 +69,6 @@ public static function markItUp ($previewParserPath, $selecteur = '.markItUp') {
         <link rel="stylesheet" type="text/css" href="$css2" />
         <script type="text/javascript" >
             mySettings.previewParserPath = "$previewParserPath";
-            function markItUpAddMedia() {
-                $(".markItUpAddMedia").click(function() {
-                    src = $(this).attr("href");
-                    alt = $(this).attr("title");
-                    $.markItUp(
-                        { target:"$selecteur", replaceWith: "!["+alt+"]("+src+")" }
-                    );
-                    return false;
-                });
-            }
             $(function() {
                 $("$selecteur").markItUp(mySettings);
             });
