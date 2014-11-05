@@ -4,28 +4,26 @@ $(document).ready(function() {
     $('.markItUpContainer').append('<iframe class="markItUpSpecialPreview"></iframe>');
 
     $('.markItUpOnglet').on("click", "li", function() {
-        $('.markItUpOnglet li').removeClass('markItUpOnglet-actif');
+        $markItUp = $(this).parents('.markItUp');
+        $markItUp.find('.markItUpOnglet li').removeClass('markItUpOnglet-actif');
         $(this).addClass('markItUpOnglet-actif');
         if($(this).index() == 0) {
-            $('.markItUpSpecialPreview').hide();
-            $('.markItUpHeader').show();
+            $markItUp.find('.markItUpSpecialPreview').hide();
+            $markItUp.find('.markItUpHeader').show();
         } else {
-            $('.markItUpSpecialPreview').contents().find("body").html('');
+            $markItUp.find('.markItUpSpecialPreview').contents().find("body").html('');
             $.ajax({
                 type: 'POST',
                 dataType: 'text',
                 global: false,
                 url: mySettings.previewParserPath,
-                data: { data: $('textarea.markItUp').val()},
+                data: { data: $markItUp.find('textarea.markItUp').val()},
                 success: function(data) {
-                    $('.markItUpSpecialPreview').contents().find("body").html(data);
+                    $markItUp.find('.markItUpSpecialPreview').contents().find("body").html(data);
                 }
             });
-            $('.markItUpSpecialPreview').show();
-            $('.markItUpHeader').hide();
+            $markItUp.find('.markItUpSpecialPreview').show();
+            $markItUp.find('.markItUpHeader').hide();
         }
     });
-
-
-
 });
