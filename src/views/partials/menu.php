@@ -5,7 +5,7 @@
             <ul>
                 <?php foreach ($menu['smenus'] as $smenu) : ?>
                 <li><a href="<?= route($smenu['route']) ?>">
-                    <img src="<?= asset('packages/ipsum/admin/img/'.$smenu['icone']) ?>" alt="<?= e($smenu['nom']) ?>" />
+                    <img src="<?= asset($smenu['icone_path']) ?>" alt="<?= e($smenu['nom']) ?>" />
                     <?= e($smenu['nom']) ?></a>
                 </li>
                 <?php endforeach; ?>
