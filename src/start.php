@@ -19,7 +19,7 @@ Route::filter('authAdmin', function()
     // Check accès au controleur
     $controleur = strstr(Route::currentRouteAction(), '@', true);
     if (!Auth::user()->hasAcces($controleur::$zone)) {
-        return Redirect::to('admin')->with('error', "Vous n'avez pas accès à cette page");
+        App::abort(403);
     }
 });
 
