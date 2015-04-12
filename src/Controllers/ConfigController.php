@@ -16,12 +16,7 @@ class ConfigController extends BaseController {
 
     public function __construct()
     {
-        $this->beforeFilter(function()
-        {
-            if (!Auth::user()->isAdmin()) {
-                return Redirect::route('admin')->with('error', "Vous n'avez pas accès à cette page");
-            }
-        });
+        $this->beforeFilter('authSuperAdmin');
     }
 
     /**

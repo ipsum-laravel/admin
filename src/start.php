@@ -23,6 +23,15 @@ Route::filter('authAdmin', function()
     }
 });
 
+Route::filter('authSuperAdmin', function()
+{
+    if (Auth::guest()) return Redirect::guest(route('admin.login'));
+
+    if (!Auth::user()->isSuperAdmin()) {
+        return Redirect::route('admin')->with('error', "Vous n'avez pas accès à cette page");
+    }
+});
+
 
 /*
 |--------------------------------------------------------------------------

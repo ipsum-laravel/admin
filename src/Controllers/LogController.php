@@ -16,12 +16,7 @@ class LogController extends BaseController {
 
     public function __construct()
     {
-        $this->beforeFilter(function()
-        {
-            if (!Auth::user()->isSuperAdmin()) {
-                return Redirect::route('admin')->with('error', "Vous n'avez pas accès à cette page");
-            }
-        });
+        $this->beforeFilter('authSuperAdmin');
 
         $this->fichier_log = storage_path().'/logs/laravel.log';
     }
