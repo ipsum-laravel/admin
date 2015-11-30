@@ -16,7 +16,7 @@ class ConfigController extends BaseController {
 
     public function __construct()
     {
-        $this->beforeFilter('authSuperAdmin');
+        $this->beforeFilter('authAdmin');
     }
 
     /**
