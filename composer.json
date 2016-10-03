@@ -10,7 +10,7 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
-        "ipsum/core": "1.0.*@dev"
+        "ipsum/core": "dev-master@dev"
     },
     "repositories": [
         {
