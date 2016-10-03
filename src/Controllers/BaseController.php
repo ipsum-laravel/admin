@@ -20,6 +20,8 @@ class BaseController extends \BaseController {
     {
         $this->beforeFilter('authAdmin');
         $this->beforeFilter('csrf', array('on' => array('post')));
+        
+        Config::set('pagination', 'IpsumAdmin::partials.pagination');
     }
 
     /**
