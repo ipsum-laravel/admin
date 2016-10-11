@@ -22,7 +22,6 @@ class BaseController extends \BaseController {
         $this->beforeFilter('csrf', array('on' => array('post')));
         
         Config::set('view.pagination', 'IpsumAdmin::partials.pagination');
-        Config::set('view.notification', 'IpsumAdmin::partials.notifications');
     }
 
     /**

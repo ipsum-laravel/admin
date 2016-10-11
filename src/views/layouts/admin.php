@@ -32,7 +32,7 @@
     </div>
     <div id="texte">
         <!--[if lte IE 7]><div class="attention"><p>Nous avons détecté que vous utilisez IE7 (ou une version antérieure).<br/>Ce site ne s'affichera pas correctement car cette version est dépassée. Pour une meilleure utilisation du site, nous vous recommandons fortement d'utiliser un des navigateurs suivants  :<br /><a href="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">Internet Explorer</a> <a href="http://www.apple.com/safari/">Safari</a> <a href="http://www.google.com/chrome/">Google Chrome</a> <a href="http://www.mozilla.com/firefox/">Firefox</a> <a href="http://www.opera.com/download/">Opera</a></p></div> <![endif]-->
-        <?= HTML::notifications($errors) ?>
+        <?= HTML::notifications($errors, 'IpsumAdmin::partials.notifications') ?>
         <?= $content; ?>
     </div><!-- Fin texte //-->
     <div id="footer">
