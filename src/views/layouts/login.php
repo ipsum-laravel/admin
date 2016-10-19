@@ -6,6 +6,8 @@
     <title>Administration <?= Config::get('IpsumCore::website.nom_site') ?> :: <?= $title ?></title>
     <meta name="robots" content="noindex, nofollow" />
     <link href="<?php echo asset('packages/ipsum/admin/css/admin_accueil.css'); ?>" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link id="myCss" rel="stylesheet" type="text/css" href="<?= asset('packages/ipsum/admin/css/admin_accueil-rwd.css') ?>" media="all">
 </head>
 
 <body>

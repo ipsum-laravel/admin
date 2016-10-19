@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+	var btn_mobile = '<button id="nav-mobile-trigger" type="button"><span class="btn-mobile-hamburger"><span></span> <span></span> <span></span><span></span></span></button>';
+	$('#header').append(btn_mobile);
+	$('#nav-mobile-trigger').on('click',function(){
+		$('body').toggleClass('menu-open');
+		$('#header #rubrique').slideToggle();
+	});
+
    // Confirmation avant suppression
    $('.supprimer').click( function() { return confirm('Voulez-vous supprimer ' + $(this).data('message') + ' ?');} );
 
@@ -18,7 +25,7 @@ $(document).ready(function() {
         $('.liste input[type=checkbox]').attr("checked","checked");
         return false;
    } );
-   // D�coche tous les inputs
+   // Décoche tous les inputs
    $('#select_decocher').click( function() {
         $('.liste input[type=checkbox]').attr("checked","");
         return false;

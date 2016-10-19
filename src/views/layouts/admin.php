@@ -6,6 +6,8 @@
     <meta name="robots" content="noindex, nofollow" />
     <link href="<?= asset('packages/ipsum/admin/css/admin.css') ?>" type="text/css" rel="stylesheet" />
     <link href="<?= asset('packages/ipsum/admin/css/admin_print.css') ?>" type="text/css" rel="stylesheet" media="print" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link id="myCss" rel="stylesheet" type="text/css" href="<?= asset('packages/ipsum/admin/css/admin-rwd.css') ?>" media="all">
 
     <!--    Librairie javascript //-->
     <script type="text/javascript" src="<?= asset('packages/ipsum/admin/js/jquery-1.11.1.min.js') ?>"></script>
