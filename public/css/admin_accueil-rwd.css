@@ -1,11 +1,11 @@
-#conteneur 	h1 img 						{display: none;}
-#conteneur 	h1 span 					{ background: #fff; letter-spacing: 0.05em; color: #333 !important; font-size: 25px; padding-top: 15px; padding-bottom: 5px; text-shadow: 1px 2px 5px rgba(0,0,0,0.2);}
 @media screen and (max-width: 1030px) {
 	body 									{ padding: 0 15px;}
 	#conteneur 								{ width: 100%; max-width: 420px;background: #FFF; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.25);}
+	#conteneur 	h1 img 						{display: none;}
+	#conteneur 	h1 span 					{ background: #fff; letter-spacing: 0.05em; color: #333 !important; font-size: 25px; padding-top: 15px; padding-bottom: 5px; text-shadow: 1px 2px 5px rgba(0,0,0,0.2);}
 	#conteneur .baspage 					{ padding-bottom: 15px;}
 	#conteneur_haut,
-	#conteneur_bas 							{ display: none;} 
+	#conteneur_bas 							{ display: none;}
 	label 									{ margin-bottom: 5px; }
 	label,
 	input[type=text]						{ width: 100%; display: block; float: none; clear: both; text-align: left;}
