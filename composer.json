@@ -12,12 +12,6 @@
         "illuminate/support": "4.2.*",
         "ipsum/core": "dev-master@dev"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "https://github.com/ipsum-laravel/core.git"
-        }
-    ],
     "autoload": {
         "classmap": [
             "src/migrations"
