@@ -1,6 +1,7 @@
 <?php
 namespace Ipsum\Admin\Controllers;
 
+use Ipsum\Core\Models\Website;
 use View;
 use Input;
 use Redirect;
@@ -27,7 +28,8 @@ class ConfigController extends BaseController {
      */
     public function index()
     {
-        $this->layout->content = View::make('IpsumAdmin::config');
+        $types = Website::types();
+        $this->layout->content = View::make('IpsumAdmin::config', compact('types'));
     }
 
 
