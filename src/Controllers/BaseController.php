@@ -47,9 +47,12 @@ class BaseController extends \BaseController {
 
     public function getIndex()
     {
-        $this->layout->rubrique = null;
-        $this->layout->title = 'Dashboard';
-        $this->layout->content = View::make('IpsumAdmin::dashboard');
+        $array = Config::get('IpsumAdmin::menu');
+        $array = reset($array);
+        $menu = reset($array);
+        $url = isset($menu['url']) ? $menu['url'] : route($menu['route']);
+
+        return Redirect::away($url);
     }
 
     public function configuration()
