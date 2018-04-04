@@ -41,7 +41,7 @@ Route::group(
             "uses" => "RemindersController@getReset",
         ));
         Route::post("reset", array(
-            "as" => "admin.reset",
+            "as" => "admin.reset.post",
             "uses" => "RemindersController@postReset",
         ));
 
