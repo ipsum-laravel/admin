@@ -8,7 +8,7 @@
 
         <p>
             Pour récupérer votre mot de passe veuillez utiliser ce lien :<br>
-            <?= link_to_route('admin.reset', null, array($token)) ?>
+            <?= link_to_route('admin.reset', null, array('token' => $token)) ?>
         </p>
     </body>
 </html>
