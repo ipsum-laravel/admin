@@ -118,7 +118,7 @@ public static function googleMaps ($marker = '', $center = "46.225453,2.219238",
     $marker = !empty($marker) ? "placeMarker(new google.maps.LatLng(".$marker."));" : '';
     $code = <<<fin
         <!-- Inclusion de l'API Google MAPS -->
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=$google_api_key"></script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=$google_api_key"></script>
         <script type="text/javascript">
         function initialiser() {
             var center = new google.maps.LatLng($center);
