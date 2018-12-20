@@ -19,7 +19,7 @@ class CreateUtilisateurTable extends Migration {
             $table->string('prenom', 50);
             $table->string('email', 255)->unique();
             $table->string('password', 120);
-            $table->string('acces', 120);
+            $table->text('acces');
             $table->tinyInteger('role');
         });
 	}
