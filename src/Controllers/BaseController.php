@@ -47,12 +47,16 @@ class BaseController extends \BaseController {
 
     public function getIndex()
     {
-        $array = Config::get('IpsumAdmin::menu');
-        $array = reset($array);
-        $menu = reset($array);
-        $url = isset($menu['url']) ? $menu['url'] : route($menu['route']);
-
-        return Redirect::away($url);
+        $groupes = Config::get('IpsumAdmin::menu');
+        foreach ($groupes as $groupe) {
+            foreach ($groupe as $menu) {
+                if (\Auth::user()->hasAcces($menu['zone'])) {
+                    $url = isset($menu['url']) ? $menu['url'] : route($menu['route']);
+                    return Redirect::away($url);
+                }
+            }
+        }
+        \App::abort(403);
     }
 
     public function configuration()
