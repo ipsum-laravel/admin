@@ -2,7 +2,7 @@
 
 Route::group(
     array(
-        'prefix' => 'administration',
+        'prefix' => Config::has('app.path_administration') ? Config::get('app.path_administration') : 'administration',
         'namespace' => '\Ipsum\Admin\Controllers'
     ),
     function() {
