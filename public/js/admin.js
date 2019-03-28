@@ -22,12 +22,12 @@ $(document).ready(function() {
 
    // Coche tous les input checkbox d'un tableau
    $('#select_cocher').click( function() {
-        $('.liste input[type=checkbox]').attr("checked","checked");
+        $('.liste input[type=checkbox]').prop('checked',true);
         return false;
    } );
    // Décoche tous les inputs
    $('#select_decocher').click( function() {
-        $('.liste input[type=checkbox]').attr("checked","");
+        $('.liste input[type=checkbox]').prop('checked',false);
         return false;
    } );
 
