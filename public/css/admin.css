@@ -21,30 +21,23 @@ position: relative;
 }
     #conteneur {
     position: relative;
-    width:990px;
-    margin: 10px auto 0 auto;
+    width:970px;
+    margin: 10px auto 10px auto;
     text-align:left;
-    background: transparent url(conteneur.png) 0 0 repeat-y;
+    background: white;
+    box-shadow: 1px 1px 12px #555;
+    border-radius: 10px;
     }
-        #conteneur_haut {
-        font-size:  1px;
-        height: 18px;
-        background: transparent url(conteneur_haut.png) 0 0 no-repeat;
-        }
-        #conteneur_bas {
-        font-size:  1px;
-        height: 22px;
-        background: transparent url(conteneur_bas.png) 0 0 no-repeat;
-        }
 
 /*---- Bandeau -------*/
 #header {
 position: relative;
 height: 115px;
-margin:  0 10px;
-padding: 0 10px;
+padding: 10px 10px;
 background: #d7d29d url(header.png) 0 0 repeat-x;
 text-align: right;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 }
     h1 {
     font-size: 1.4em;
@@ -61,7 +54,7 @@ text-align: right;
     }
     #rubrique {
     position: absolute;
-    top: 3px;
+    top: 10px;
     left:  10px;
     height: 77px;
     text-align: center;
@@ -117,7 +110,7 @@ top: 108px;
 left: 0;
 height: 54px;
 width: 960px;
-margin:  0 10px;
+margin:  0 0;
 padding-left: 10px;
 background: transparent url(menu.png) left bottom repeat-x;
 }
@@ -178,7 +171,7 @@ float: left;
 background: white;
 width: 950px;
 min-height: 300px;
-margin: 50px 20px 0 20px;
+margin: 50px 10px 0 10px;
 color: black;
 }
     #texte h2 {
@@ -258,7 +251,7 @@ position: relative;
 top: 10px;
 clear: both;
 color: black;
-padding: 15px 10px 5px 20px;
+padding: 15px 10px 20px 20px;
 text-align: left;
 font-style: italic;
 }
