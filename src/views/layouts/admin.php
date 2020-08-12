@@ -15,7 +15,7 @@
 
     <?= empty($head) ? '' : $head ?>
 </head>
-<body>
+<body style="<?= Config::has('app.background-color-administration') ? 'background-color: '.e(Config::get('app.background-color-administration')) : '' ?>">
 <div id="conteneur">
 <div id="conteneur_haut"></div>
     <div id="header">
