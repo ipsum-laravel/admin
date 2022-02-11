@@ -78,6 +78,27 @@ fin;
     return $code;
 }
 
+public static function tinyMce ($selecteur = '.jwysiwyg') {
+    $js1 = asset('packages/ipsum/admin/js/editeur/tinymce/tinymce.min.js');
+        $code = <<<fin
+        <script type="text/javascript" src="$js1"></script>
+        <script type="text/javascript" >
+            tinymce.init({
+                selector: '$selecteur',
+                plugins: 'code paste autolink link',
+                toolbar: 'bold italic removeformat | link | code',
+                menubar: '',
+                paste_as_text: true,
+                branding: false,
+                //forced_root_block: '',
+                statusbar: false,
+                entity_encoding: 'raw'
+            })
+        </script>
+fin;
+        return $code;
+}
+
 public static function datePicker ($param='') {
     $css = asset("packages/ipsum/admin/js/datePicker/date-picker.css");
     $js1 = asset("packages/ipsum/admin/js/datePicker/jquery.datePicker.js");
