@@ -85,8 +85,8 @@ public static function tinyMce ($selecteur = '.jwysiwyg') {
         <script type="text/javascript" >
             tinymce.init({
                 selector: '$selecteur',
-                plugins: 'code paste autolink link',
-                toolbar: 'bold italic removeformat | link | code',
+                plugins: 'code paste autolink lists link',
+                toolbar: 'bold italic bullist removeformat | link | code',
                 menubar: '',
                 paste_as_text: true,
                 branding: false,
